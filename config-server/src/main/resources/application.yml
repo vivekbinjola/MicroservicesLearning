@@ -1,0 +1,14 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      server:
+        git:
+          url:
+          Username: ${GIT_USERNAME}
+          password: @{GIT_PASSWORD}
+

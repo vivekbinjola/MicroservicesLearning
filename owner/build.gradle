@@ -18,9 +18,11 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 //	runtimeOnly 'com.h2database:h2'
-	// https://mvnrepository.com/artifact/com.mysql/mysql-connector-j
-	implementation group: 'com.mysql', name: 'mysql-connector-j', version: '8.0.32'
-
+	// https://mvnrepository.com/artifact/mysql/mysql-connector-java
+	implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.29'
+	//for configserver to run we need below 2 dependencies
+	implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-config', version: '4.0.2'
+	implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-bootstrap', version: '4.0.2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 

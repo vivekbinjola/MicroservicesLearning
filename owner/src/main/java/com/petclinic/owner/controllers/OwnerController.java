@@ -6,6 +6,7 @@ import com.petclinic.owner.models.Owner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,17 +17,23 @@ import java.util.List;
 @RestController
 public class OwnerController {
     Logger logger = LoggerFactory.getLogger(OwnerController.class);
+
+    @Value("${message: mymessage}")
+    private String message;
+
     @Autowired
     OwnerService ownerService;
 
-    @GetMapping("/message")
-    public String GetOwner(){
-        return "Hello Owner";
-    }
+
 
     @GetMapping("/all")
     public List<Owner> getAllOwners(){
        return this.ownerService.getAllOwners();
+    }
+
+    @GetMapping("/message")
+    public String getMessage(){
+        return this.message;
     }
 
     @PostMapping("/add")

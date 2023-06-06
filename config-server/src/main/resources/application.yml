@@ -3,12 +3,17 @@ server:
 
 spring:
   application:
-    name: config-client
+    name: config-server
   cloud:
     config:
       server:
         git:
-          url:
-          Username: ${GIT_USERNAME}
-          password: @{GIT_PASSWORD}
+          skip-ssl-validation: true
+#          to attach config server to github
+          uri: https://github.com/vivekbinjola/config-files
+          clone-on-start: true
+          username: ${GIT_USERNAME}
+          password: ${GIT_PASSWORD}
+          searchPaths: petclinic
+
 

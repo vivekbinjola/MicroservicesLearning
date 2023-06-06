@@ -1,0 +1,28 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: owner-service
+
+#  datasource:
+#    hikari:
+#      maximum-pool-size: 2
+#    password: ${DATABASE_PASSWORD}
+#    url: ${DATABASE_URL}
+#    username: ${DATABASE_USERNAME}
+#  jackson:
+#    serialization:
+#      fail-on-empty-beans: false
+#        indent_output: true
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQLDialect
+#    format_sql: true
+#    show-sql: true
+
+#  to attach owner to configserver -> config-files(Github)
+  config:
+    import=configserver: http://localhost:8888/owner/service

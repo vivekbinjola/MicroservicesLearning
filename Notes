@@ -1,0 +1,12 @@
+DATABASE_URL=jdbc:mysql://database-2.c9t3ysqbcpgv.us-east-1.rds.amazonaws.com:3306/database-2?createDatabaseIfNotExist=true;
+DATABASE_USERNAME=admin;
+DATABASE_PASSWORD=CognVixen23
+GithubToken = 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
+
+[5/24 5:36 PM] Monroe, Jason (Cognizant)
+DATABASE_URL=jdbc:mysql://developer-rds-2-cluster.cfqctdytya09.us-east-2.rds.amazonaws.com:3306/database-2?createDatabaseIfNotExist=true;
+DATABASE_USERNAME=admin;
+DATABASE_PASSWORD=Be.Cognizant2022!
+
+How to access config-files:
+http://localhost:8888/application/default

@@ -1,0 +1,4 @@
+spring:
+  application:
+    name: config-application
+test: value

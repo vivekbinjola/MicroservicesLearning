@@ -1,13 +1,15 @@
-package com.petclinic.owner;
+package com.petclinic.pet;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-public class OwnerApplication {
+@EnableFeignClients
+public class PetApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(OwnerApplication.class, args);
+		SpringApplication.run(PetApplication.class, args);
 	}
 
 }
